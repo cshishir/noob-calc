@@ -16,6 +16,11 @@
     <div class="calc">
       <input id="display" type="text" disabled />
 
+      <div class = "row">
+        <button style = "width : 48%"onclick="clearDisplay()">C</button>
+        <button style = "width : 46%" onclick="eraseLastCharacter()">Del</button> 
+      </div>
+
       <div class="row">
         <button onclick="appendCharacter('Math.sin(')">sin</button>
         <button onclick="appendCharacter('Math.cos(')">cos</button>
@@ -61,14 +66,12 @@
       <div class="row">
         <button onclick="appendCharacter('Math.PI')">π</button>
         <button onclick="appendCharacter('Math.E')">e</button>
-        <button onclick="clearDisplay()">C</button>
-        <button onclick="eraseLastCharacter()">Del</button>
+        <button onclick="appendCharacter('Math.LN2')">ln(2)</button>
+        <button onclick="appendCharacter('Math.LN10')">ln(10)</button>
       </div>
 
       <div class="row">
-        <button onclick="appendCharacter('Math.LN2')">ln(2)</button>
-        <button onclick="appendCharacter('Math.LN10')">ln(10)</button>
-        <button style="width: 134px" onclick="calculateResult()">=</button>
+        <button style="width: 98%" onclick="calculateResult()">=</button>
       </div>
     </div>
   </div>
