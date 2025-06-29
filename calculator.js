@@ -36,6 +36,45 @@ function calculatePercentage(){
   } 
 }
 
+// scientific section 
+
+function calculateSquareRoot() {
+  try {
+    display.value = Math.sqrt(eval(display.value));
+  } catch {
+    display.value = "Error";
+  }
+}
+
+function calculateSquare() {
+  display.value = display.value ** 2;
+}
+
+function calculateCube() {
+  display.value = display.value ** 3;
+}
+
+function appendPi() {
+  display.value += "Math.PI";
+}
+
+function appendE() {
+  display.value += "Math.E";
+}
+
+function calculateFactorial() {
+  const num = parseInt(display.value);
+  if (isNaN(num) || num < 0) {
+    display.value = "Error";
+    return;
+  }
+  let factorial = 1;
+  for (let i = 2; i <= num; i++) {
+    factorial *= i;
+  }
+  display.value = factorial;
+}
+
 // read keyboard input
 document.addEventListener("keydown", function(event) {
   const key = event.key;
@@ -50,4 +89,3 @@ document.addEventListener("keydown", function(event) {
       clearDisplay(); 
   }
 });
-
